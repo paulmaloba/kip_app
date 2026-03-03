@@ -1,0 +1,70 @@
+version: '3.9'
+
+services:
+
+  # ── PostgreSQL ────────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: kip_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       kip_db
+      POSTGRES_USER:     kip
+      POSTGRES_PASSWORD: kip_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kip -d kip_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── FastAPI Backend ────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kip_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./kip_corpus:/app/kip_corpus        # Knowledge base
+      - ./ml_models:/app/ml                  # LSTM model files
+      - ./data:/app/data                     # CPI CSV
+    environment:
+      DATABASE_URL:             postgresql+asyncpg://kip:kip_password@postgres:5432/kip_db
+      ANTHROPIC_API_KEY:        ${ANTHROPIC_API_KEY}
+      CLAUDE_MODEL:             ${CLAUDE_MODEL:-claude-haiku-4-5-20251001}
+      CHROMA_DB_PATH:           /app/kip_corpus/chroma_db
+      CHROMA_COLLECTION:        kip_knowledge
+      LSTM_GDP_MODEL_PATH:      /app/ml/gdp_growth_lstm_model.h5
+      LSTM_INFLATION_MODEL_PATH: /app/ml/inflation_lstm_model.h5
+      CPI_CSV_PATH:             /app/data/consumer-price_index.csv
+      TWILIO_ACCOUNT_SID:       ${TWILIO_ACCOUNT_SID:-}
+      TWILIO_AUTH_TOKEN:        ${TWILIO_AUTH_TOKEN:-}
+      TWILIO_WHATSAPP_NUMBER:   ${TWILIO_WHATSAPP_NUMBER:-whatsapp:+14155238886}
+      CORS_ORIGINS:             '["http://localhost:5173","http://localhost:3000","http://frontend:3000"]'
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # ── React Frontend (production build) ─────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: kip_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    environment:
+      VITE_API_URL: http://backend:8000/api
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
