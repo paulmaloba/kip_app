@@ -1,7 +1,8 @@
 import axios from 'axios'
 import { useKIPStore } from '@/store/kipStore'
 
-const BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'
+// const BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'
+const BASE = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8000/api'
 
 const api = axios.create({ baseURL: BASE })
 
