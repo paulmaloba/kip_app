@@ -25,11 +25,20 @@ router = APIRouter()
 
 # ── Request / Response schemas ────────────────────────────────────────────────
 
+# class ChatRequest(BaseModel):
+#     message:         str
+#     session_token:   str
+#     user_id:         Optional[str] = None
+#     business_id:     Optional[str] = None
 class ChatRequest(BaseModel):
-    message:         str
-    session_token:   str
-    user_id:         Optional[str] = None
-    business_id:     Optional[str] = None
+    message:       str = ""
+    content:       str = ""          # ← frontend sends this
+    session_token: str = ""
+    user_id:       Optional[str] = None
+    business_id:   Optional[str] = None
+
+    def get_message(self) -> str:
+        return self.message or self.content
 
 
 class StartBusinessJourneyRequest(BaseModel):
@@ -108,9 +117,9 @@ async def send_message(
     """
     Main chat endpoint. Returns full structured response.
     """
-    if not req.message.strip():
+    if not req.get_message().strip():
         raise HTTPException(400, "Message cannot be empty")
-    if len(req.message) > 4000:
+    if len(req.get_message()) > 4000:
         raise HTTPException(400, "Message too long (max 4000 chars)")
 
     # Get or create conversation
@@ -127,14 +136,14 @@ async def send_message(
         id=str(uuid.uuid4()),
         conversation_id=conv.id,
         role=MessageRole.user,
-        content=req.message,
+        content=req.get_message(),
     )
     db.add(user_msg)
 
     # Generate KIP response
     try:
         result = await generate_response(
-            user_message=req.message,
+            user_message=req.get_message(),
             conversation_history=history,
             business_profile=business_prof,
         )
