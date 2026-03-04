@@ -74,10 +74,10 @@ export default function ChatPanel() {
                   onKeyDown={handleKey}
                   placeholder="Ask KIP anything about business in Zambia..."
                   rows={1}
-                  className="w-full resize-none rounded-xl border border-kip-light bg-kip-offwhite
-                             px-4 py-3 font-body text-sm text-kip-charcoal placeholder-kip-muted
+                  className="w-full resize-none rounded-xl border border-kip-navylight bg-kip-navylight
+                             px-4 py-3 font-body text-sm text-white placeholder-white/30
                              focus:outline-none focus:ring-2 focus:ring-kip-cornflower/30
-                             focus:border-kip-cornflower/50 transition-all max-h-32 overflow-y-auto bg-kip-navylight text-white placeholder-white/30 border-kip-navylight"
+                             focus:border-kip-cornflower/50 transition-all max-h-32 overflow-y-auto"
                   onInput={(e) => {
                     const t = e.target as HTMLTextAreaElement
                     t.style.height = 'auto'
