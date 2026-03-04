@@ -1,3 +1,4 @@
+@import './chat-fixes.css';
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap');
 
 @tailwind base;
@@ -14,10 +15,8 @@
   }
 
   body {
-    background-color: #000c2c;
-     /*#F0F4FF; */
-    color: #f1f3f8;
-    /*#1A2133;*/
+    background-color: #F0F4FF;
+    color: #1A2133;
     overflow: hidden;
   }
 

@@ -17,6 +17,7 @@ from typing import Optional, AsyncGenerator
 from models.database import get_db, Conversation, Message, MessageRole, BusinessProfile
 from services.kip_brain import generate_response
 from services.intent_classifier import classify_intent
+from services.kip_persona import get_system_prompt
 
 logger = logging.getLogger("kip.chat")
 router = APIRouter()

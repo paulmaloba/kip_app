@@ -1,0 +1,31 @@
+/* Add these rules to your existing global.css */
+
+/* ── Fix: chat textarea text visibility ─────────────────────── */
+.chat-input-area textarea,
+.chat-input-area input {
+  color: #ffffff !important;
+  caret-color: #6495ED !important;
+}
+
+.chat-input-area textarea::placeholder,
+.chat-input-area input::placeholder {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Ensure text is always visible on dark backgrounds */
+textarea.kip-input {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  caret-color: #6495ED;
+}
+
+textarea.kip-input::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ── Mobile: safe area bottom padding ───────────────────────── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

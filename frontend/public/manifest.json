@@ -1,0 +1,33 @@
+{
+  "name": "KIP — Kwacha Intelligence Platform",
+  "short_name": "KIP",
+  "description": "AI-powered business and economic intelligence for Zambia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1628",
+  "theme_color": "#6495ED",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/kip_logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/kip-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/kip-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}

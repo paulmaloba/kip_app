@@ -66,6 +66,7 @@ export default function ChatPanel() {
         <div className="flex items-end gap-3 max-w-3xl mx-auto">
           <div className="flex-1">
             <textarea
+              style={{ color: '#ffffff', caretColor: '#6495ED' }}
               ref={textareaRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}

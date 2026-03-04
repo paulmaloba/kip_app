@@ -132,11 +132,25 @@ async def generate_response(
     rag_context = retrieve_context(user_message)
 
     # Step 3: Build system prompt
+    # system_prompt = get_system_prompt_for_type(response_type)
+    # if rag_context:
+    #     system_prompt += f"\n\n{rag_context}"
+    # if business_profile:
+    #     system_prompt += f"\n\n{build_business_context(business_profile)}"
+    # Step 3: Build system prompt with live economic + news context
+    from services.learning_service import get_learning_context
     system_prompt = get_system_prompt_for_type(response_type)
+    try:
+        live_context = await get_learning_context()
+        if live_context:
+            system_prompt += f"\n\n{live_context}"
+    except Exception as e:
+        logger.warning(f"Live context injection failed: {e}")
     if rag_context:
         system_prompt += f"\n\n{rag_context}"
     if business_profile:
         system_prompt += f"\n\n{build_business_context(business_profile)}"
+
 
     # Step 4: Build message history
     history = build_conversation_history(conversation_history)
