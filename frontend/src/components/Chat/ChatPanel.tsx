@@ -65,26 +65,25 @@ export default function ChatPanel() {
       <div className="border-t border-kip-navylight bg-kip-navymid px-4 py-4">
         <div className="flex items-end gap-3 max-w-3xl mx-auto">
           <div className="flex-1">
-            <textarea
-              style={{ color: '#ffffff', caretColor: '#6495ED' }}
-              ref={textareaRef}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKey}
-              placeholder="Ask KIP anything about business in Zambia..."
-              rows={1}
-              className="w-full resize-none rounded-xl border border-kip-light bg-kip-offwhite
-                         px-4 py-3 font-body text-sm text-kip-charcoal placeholder-kip-muted
-                         focus:outline-none focus:ring-2 focus:ring-kip-cornflower/30
-                         focus:border-kip-cornflower/50 transition-all max-h-32 overflow-y-auto bg-kip-navylight text-white placeholder-white/30 border-kip-navylight"
-              style={{ minHeight: '48px' }}
-              onInput={(e) => {
-                const t = e.target as HTMLTextAreaElement
-                t.style.height = 'auto'
-                t.style.height = Math.min(t.scrollHeight, 128) + 'px'
 
-              }}
-            />
+               <textarea
+                  style={{ color: '#ffffff', caretColor: '#6495ED', minHeight: '48px' }}
+                  ref={textareaRef}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKey}
+                  placeholder="Ask KIP anything about business in Zambia..."
+                  rows={1}
+                  className="w-full resize-none rounded-xl border border-kip-light bg-kip-offwhite
+                             px-4 py-3 font-body text-sm text-kip-charcoal placeholder-kip-muted
+                             focus:outline-none focus:ring-2 focus:ring-kip-cornflower/30
+                             focus:border-kip-cornflower/50 transition-all max-h-32 overflow-y-auto bg-kip-navylight text-white placeholder-white/30 border-kip-navylight"
+                  onInput={(e) => {
+                    const t = e.target as HTMLTextAreaElement
+                    t.style.height = 'auto'
+                    t.style.height = Math.min(t.scrollHeight, 128) + 'px'
+                  }}
+                />
           </div>
           <motion.button
             onClick={handleSend}
