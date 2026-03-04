@@ -1,3 +1,4 @@
+import NotificationBell from '@/components/ui/NotificationBell'
 import { useState } from 'react'
 import { Menu, MessageSquare, BarChart2, Briefcase, Globe } from 'lucide-react'
 import { useKIPStore } from '@/store/kipStore'
@@ -46,6 +47,9 @@ export default function App() {
           </button>
           <span className="font-display font-bold text-white text-base">KIP</span>
           <span className="font-body text-kip-cornflower/60 text-xs">Kwacha Intelligence</span>
+          <div className="ml-auto">
+              <NotificationBell />
+          </div>
         </div>
 
         {/* Main content */}

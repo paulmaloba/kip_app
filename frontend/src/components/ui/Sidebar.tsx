@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { MessageSquare, BarChart2, Briefcase, ChevronLeft, ChevronRight, Cpu, Globe, LogOut, User, X } from 'lucide-react'
 import { useKIPStore } from '@/store/kipStore'
 import { authLogout } from '@/hooks/useAPI'
+import NotificationBell from '@/components/ui/NotificationBell'
 
 const NAV_ITEMS = [
   { id: 'chat',      label: 'Ask KIP',     icon: MessageSquare, desc: 'Business intelligence' },
@@ -41,6 +42,11 @@ export default function Sidebar({ mobileOpen = false, onMobileClose }: Props) {
             </motion.div>
           )}
         </AnimatePresence>
+        {!collapsed && (
+        <div className="ml-auto">
+          <NotificationBell />
+        </div>
+        )}
         {onMobileClose && (
           <button onClick={onMobileClose} className="ml-auto text-white/40 hover:text-white transition-colors">
             <X size={18} />

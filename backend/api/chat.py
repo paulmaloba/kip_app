@@ -34,11 +34,15 @@ class ChatRequest(BaseModel):
     message:       str = ""
     content:       str = ""          # ← frontend sends this
     session_token: str = ""
-    user_id:       Optional[str] = None
+    # user_id:       Optional[str] = None
+    user_id: Optional[str | int] = None
     business_id:   Optional[str] = None
 
     def get_message(self) -> str:
         return self.message or self.content
+
+    def get_user_id(self) -> Optional[str]:
+        return str(self.user_id) if self.user_id is not None else None
 
 
 class StartBusinessJourneyRequest(BaseModel):
@@ -124,7 +128,7 @@ async def send_message(
 
     # Get or create conversation
     conv = await get_or_create_conversation(
-        db, req.session_token, req.user_id, req.business_id
+        db, req.session_token, req.get_user_id(), req.business_id
     )
 
     # Load history and business profile

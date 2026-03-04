@@ -1,3 +1,4 @@
+import ExchangeRatePanel from '@/components/ui/ExchangeRatePanel'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { TrendingUp, DollarSign, Pickaxe, RefreshCw } from 'lucide-react'
@@ -5,6 +6,7 @@ import { useKIPStore } from '@/store/kipStore'
 import { getAllForecasts } from '@/hooks/useAPI'
 import ForecastChart from './ForecastChart'
 import { CPIIndicator } from '@/types'
+
 
 export default function DashboardPanel() {
   const { metrics, gdpForecast, inflationForecast, cpiIndicators, setDashboardData } = useKIPStore()
@@ -105,6 +107,10 @@ function CPICard({ indicator, index }: { indicator: CPIIndicator; index: number 
         <span className={`text-xs font-mono font-bold px-1.5 py-0.5 rounded-md flex-shrink-0 ${isUp ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-700'}`}>
           {isUp ? '+' : ''}{indicator.yoy_pct?.toFixed(1)}%
         </span>
+      </div>
+     {/* notification*/}
+      <div className="bg-kip-navymid rounded-2xl p-5 border border-white/8">
+          <ExchangeRatePanel />
       </div>
       <div className="font-mono text-xl font-bold text-kip-charcoal mb-1">{indicator.current?.toFixed(1)}</div>
       <p className="text-xs text-kip-muted font-body mb-2">Current index (2016 base)</p>
