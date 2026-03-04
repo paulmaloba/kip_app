@@ -12,6 +12,7 @@ from typing import AsyncGenerator, Optional
 import anthropic
 
 from services.intent_classifier import classify_intent, get_system_prompt_for_type, ResponseType
+from services.geo_service import get_geo_context_for_query
 from config import settings
 
 logger = logging.getLogger("kip.brain")
@@ -146,10 +147,16 @@ async def generate_response(
             system_prompt += f"\n\n{live_context}"
     except Exception as e:
         logger.warning(f"Live context injection failed: {e}")
+    # Step 3b: Inject geo intelligence if location mentioned
+    geo_context = get_geo_context_for_query(user_message)
+    if geo_context:
+        system_prompt += f"\n\n{geo_context}"
+        logger.info("Geo context injected into prompt")
     if rag_context:
         system_prompt += f"\n\n{rag_context}"
     if business_profile:
         system_prompt += f"\n\n{build_business_context(business_profile)}"
+
 
 
     # Step 4: Build message history

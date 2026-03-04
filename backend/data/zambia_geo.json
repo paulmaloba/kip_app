@@ -1,0 +1,922 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03",
+    "coverage": "10 provinces, 116 districts, 80+ towns",
+    "data_sources": ["CSO Zambia", "Local knowledge", "Manual collection"],
+    "instructions": "Fill in null fields with local knowledge. All monetary values in ZMW."
+  },
+
+  "provinces": {
+
+    "lusaka": {
+      "name": "Lusaka Province",
+      "capital": "Lusaka",
+      "population": 3400000,
+      "gdp_contribution_pct": 35,
+      "key_sectors": ["government", "finance", "retail", "manufacturing", "services", "real_estate"],
+      "towns": {
+
+        "lusaka_cbd": {
+          "name": "Lusaka CBD",
+          "type": "capital_city",
+          "population": 3400000,
+          "coordinates": {"lat": -15.4167, "lng": 28.2833},
+          "economic_profile": {
+            "dominant_industries": ["government", "banking", "retail", "hospitality", "real_estate", "manufacturing"],
+            "major_markets": ["Soweto Market", "City Market", "Kamwala Market", "Comesa Market"],
+            "major_employers": ["Government of Zambia", "Shoprite", "Pick n Pay", "Zambia Sugar", "Lafarge", "Standard Chartered", "Zanaco"],
+            "average_monthly_income_zmw": 8500,
+            "business_density": "very_high",
+            "fastest_growing_sectors": ["fintech", "agribusiness", "logistics", "e-commerce", "construction"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 4,
+            "water_reliability": "moderate",
+            "internet_quality": "good",
+            "road_quality": "moderate",
+            "airport": "Kenneth Kaunda International",
+            "nearest_port_km": 1800
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 350,
+            "rental_cost_residential_zmw": 8000,
+            "pacra_office": true,
+            "zra_office": true,
+            "ceec_office": true,
+            "banks_present": ["Zanaco", "FNB", "Stanbic", "Standard Chartered", "Atlas Mara", "Absa", "Access Bank", "NATSAVE"],
+            "industrial_areas": ["Lusaka West Industrial", "Light Industrial Area", "Chelstone"],
+            "key_challenges": ["traffic congestion", "high rental costs", "competition", "load shedding", "crime in some markets"],
+            "unique_opportunities": ["government contracts", "diplomatic community market", "large middle class", "university students", "expat community"]
+          },
+          "consumer_insights": {
+            "spending_power": "high",
+            "popular_payment_methods": ["mobile money", "card", "cash"],
+            "market_days": "daily",
+            "peak_business_hours": "08:00-18:00",
+            "weekend_trading": true
+          },
+          "useful_contacts": {
+            "pacra": "Lusaka — Cairo Road offices",
+            "zra": "Revenue House, Cairo Road",
+            "ceec": "Lusaka offices — Longacres",
+            "znfu": "Lusaka — Show Grounds area",
+            "chamber_of_commerce": "Zambia Chamber of Commerce and Industry"
+          }
+        },
+
+        "chilanga": {
+          "name": "Chilanga",
+          "type": "satellite_town",
+          "population": 120000,
+          "coordinates": {"lat": -15.55, "lng": 28.27},
+          "economic_profile": {
+            "dominant_industries": ["cement manufacturing", "agriculture", "residential services", "retail"],
+            "major_employers": ["Lafarge Zambia (cement)", "Zambia Breweries"],
+            "average_monthly_income_zmw": 5500,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["residential construction", "poultry farming", "small retail"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 5,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "good"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 150,
+            "rental_cost_residential_zmw": 4000,
+            "key_challenges": ["limited market size", "dependent on Lusaka economy"],
+            "unique_opportunities": ["Lafarge supply chain", "residential growth", "agricultural land available"]
+          }
+        },
+
+        "kafue": {
+          "name": "Kafue",
+          "type": "industrial_town",
+          "population": 250000,
+          "coordinates": {"lat": -15.7720, "lng": 28.1798},
+          "economic_profile": {
+            "dominant_industries": ["manufacturing", "agriculture", "fishing", "chemicals"],
+            "major_employers": ["Kafue Textiles (historical)", "Nitrogen Chemicals", "smallholder farming"],
+            "average_monthly_income_zmw": 4800,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["agro-processing", "fishing supply chain", "transport logistics"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 6,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "good",
+            "river_access": "Kafue River — fishing and small cargo"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 100,
+            "rental_cost_residential_zmw": 2500,
+            "key_challenges": ["deindustrialisation legacy", "limited skilled workforce", "load shedding"],
+            "unique_opportunities": ["industrial land cheap", "Kafue river fish supply", "proximity to Lusaka (45km)", "agriculture corridor"]
+          }
+        }
+      }
+    },
+
+    "copperbelt": {
+      "name": "Copperbelt Province",
+      "capital": "Ndola",
+      "population": 2100000,
+      "gdp_contribution_pct": 28,
+      "key_sectors": ["mining", "manufacturing", "services", "agriculture"],
+      "towns": {
+
+        "kitwe": {
+          "name": "Kitwe",
+          "type": "major_city",
+          "population": 750000,
+          "coordinates": {"lat": -12.8024, "lng": 28.2132},
+          "economic_profile": {
+            "dominant_industries": ["copper mining", "manufacturing", "retail", "services", "agriculture"],
+            "major_markets": ["Kitwe City Market", "Chisokone Market", "Twatasha Market"],
+            "major_employers": ["Mopani Copper Mines", "Zambia Consolidated Copper Mines (ZCCM)", "Shoprite", "Pick n Pay", "government"],
+            "average_monthly_income_zmw": 7200,
+            "business_density": "high",
+            "fastest_growing_sectors": ["mining supply chain", "agro-processing", "retail", "construction", "SME manufacturing"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 5,
+            "water_reliability": "moderate",
+            "internet_quality": "good",
+            "road_quality": "moderate",
+            "airport": "Southdowns Airport (private/charter)",
+            "nearest_major_airport_km": 65
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 200,
+            "rental_cost_residential_zmw": 5500,
+            "pacra_office": true,
+            "zra_office": true,
+            "ceec_office": true,
+            "banks_present": ["Zanaco", "FNB", "Stanbic", "Standard Chartered", "NATSAVE", "INDO Zambia"],
+            "industrial_areas": ["Kitwe Industrial Area", "Nkana East", "Chisokone Market"],
+            "key_challenges": ["mine workforce retrenchments affect spending", "load shedding", "water shortages", "infrastructure aging"],
+            "unique_opportunities": ["mining supply chain contracts (huge)", "expat/mining worker market", "agro-processing gap", "Copperbelt University proximity", "cross-border trade with DRC"]
+          },
+          "consumer_insights": {
+            "spending_power": "high",
+            "popular_payment_methods": ["mobile money", "card", "cash"],
+            "market_days": "daily",
+            "peak_business_hours": "08:00-18:00",
+            "weekend_trading": true,
+            "notable": "Mining payday (25th-end of month) sees massive spending surge"
+          },
+          "cross_border": {
+            "drc_proximity_km": 90,
+            "border_post": "Kasumbalesa (via Chingola)",
+            "cross_border_opportunities": ["DRC exports of Zambian goods", "DRC construction materials demand", "DRC food supply"]
+          }
+        },
+
+        "ndola": {
+          "name": "Ndola",
+          "type": "major_city",
+          "population": 550000,
+          "coordinates": {"lat": -12.9587, "lng": 28.6366},
+          "economic_profile": {
+            "dominant_industries": ["manufacturing", "trade", "copper processing", "services", "logistics"],
+            "major_markets": ["Ndola City Market", "Masala Market"],
+            "major_employers": ["Zambia Copper Investments", "Ndola Lime", "government", "Shoprite", "various manufacturers"],
+            "average_monthly_income_zmw": 6800,
+            "business_density": "high",
+            "fastest_growing_sectors": ["logistics hub", "manufacturing", "retail", "agro-processing"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 5,
+            "water_reliability": "moderate",
+            "internet_quality": "good",
+            "road_quality": "good",
+            "airport": "Simon Mwansa Kapwepwe International Airport",
+            "strategic_location": "TAZARA railway, Great North Road hub"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 220,
+            "rental_cost_residential_zmw": 5000,
+            "pacra_office": true,
+            "zra_office": true,
+            "ceec_office": true,
+            "banks_present": ["Zanaco", "FNB", "Stanbic", "Standard Chartered", "NATSAVE"],
+            "industrial_areas": ["Ndola Industrial Area — largest on Copperbelt"],
+            "key_challenges": ["competition from Lusaka", "aging industry", "load shedding"],
+            "unique_opportunities": ["logistics hub for entire Copperbelt", "largest industrial area CB", "airport proximity", "TAZARA rail access"]
+          }
+        },
+
+        "chingola": {
+          "name": "Chingola",
+          "type": "mining_town",
+          "population": 220000,
+          "coordinates": {"lat": -12.5333, "lng": 27.8667},
+          "economic_profile": {
+            "dominant_industries": ["copper mining", "retail", "services", "agriculture"],
+            "major_employers": ["Konkola Copper Mines (KCM)", "government"],
+            "average_monthly_income_zmw": 6500,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["mining supply chain", "cross-border DRC trade", "agro-processing"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 6,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "moderate"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 150,
+            "rental_cost_residential_zmw": 4000,
+            "key_challenges": ["KCM uncertainty affects economy", "DRC border volatility"],
+            "unique_opportunities": ["Kasumbalesa border (DRC) 30km away — massive cross-border trade", "mining supply chain", "DRC food export demand"]
+          },
+          "cross_border": {
+            "drc_proximity_km": 30,
+            "border_post": "Kasumbalesa",
+            "cross_border_opportunities": ["food export to DRC", "DRC mining equipment supply", "DRC fuel trade"]
+          }
+        },
+
+        "mufulira": {
+          "name": "Mufulira",
+          "type": "mining_town",
+          "population": 170000,
+          "coordinates": {"lat": -12.5500, "lng": 28.2333},
+          "economic_profile": {
+            "dominant_industries": ["copper mining", "retail", "services"],
+            "major_employers": ["Mopani Copper Mines — Mufulira Division"],
+            "average_monthly_income_zmw": 6200,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["retail", "services", "small manufacturing"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 6,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "moderate"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 130,
+            "rental_cost_residential_zmw": 3500,
+            "key_challenges": ["single-industry dependence", "mine employment uncertainty"],
+            "unique_opportunities": ["underserved retail market", "mining worker spending power", "DRC proximity"]
+          }
+        },
+
+        "luanshya": {
+          "name": "Luanshya",
+          "type": "mining_town",
+          "population": 160000,
+          "coordinates": {"lat": -13.1333, "lng": 28.4167},
+          "economic_profile": {
+            "dominant_industries": ["copper mining", "retail", "services", "emerging agriculture"],
+            "major_employers": ["Luanshya Copper Mines", "government"],
+            "average_monthly_income_zmw": 5800,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["agro-processing", "retail", "poultry"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 7,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "moderate"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 120,
+            "rental_cost_residential_zmw": 3200,
+            "key_challenges": ["mine closures in past affected economy", "high unemployment"],
+            "unique_opportunities": ["cheap land and property", "underserved market", "agriculture pivot opportunity"]
+          }
+        },
+
+        "kabwe_cb": {
+          "name": "Kabwe",
+          "type": "provincial_town",
+          "province": "Central Province",
+          "population": 250000,
+          "coordinates": {"lat": -14.4469, "lng": 28.4464},
+          "economic_profile": {
+            "dominant_industries": ["trade", "agriculture", "services", "small manufacturing"],
+            "major_markets": ["Kabwe Central Market"],
+            "average_monthly_income_zmw": 4500,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["agro-processing", "transport", "retail"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 7,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "good",
+            "strategic_location": "Midpoint on Great North Road — Lusaka to Copperbelt"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 120,
+            "rental_cost_residential_zmw": 3000,
+            "key_challenges": ["lead contamination legacy (historical mining)", "limited investment"],
+            "unique_opportunities": ["Great North Road logistics", "agricultural hub", "midpoint trucking stop", "prison farms supply chain"]
+          }
+        }
+      }
+    },
+
+    "southern": {
+      "name": "Southern Province",
+      "capital": "Choma",
+      "population": 1800000,
+      "gdp_contribution_pct": 12,
+      "key_sectors": ["agriculture", "tourism", "trade", "livestock"],
+      "towns": {
+
+        "livingstone": {
+          "name": "Livingstone",
+          "type": "tourism_city",
+          "population": 200000,
+          "coordinates": {"lat": -17.8419, "lng": 25.8544},
+          "economic_profile": {
+            "dominant_industries": ["tourism", "hospitality", "retail", "agriculture", "cross-border trade"],
+            "major_employers": ["hotels", "lodges", "Victoria Falls tourism", "government"],
+            "average_monthly_income_zmw": 5500,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["eco-tourism", "hospitality services", "curio/craft", "adventure tourism", "food services"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 5,
+            "water_reliability": "good",
+            "internet_quality": "good",
+            "road_quality": "good",
+            "airport": "Harry Mwanga Nkumbula International Airport"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 200,
+            "rental_cost_residential_zmw": 5000,
+            "key_challenges": ["seasonal tourism fluctuation", "USD dependency", "Zimbabwe border competition"],
+            "unique_opportunities": ["Victoria Falls — 1.5M tourists/year", "eco-lodge development", "curio/craft market", "adventure sports", "conference tourism", "Zimbabwean/Botswana cross-border"]
+          },
+          "tourism_data": {
+            "annual_visitors": 1500000,
+            "peak_season": "May to October (dry season)",
+            "off_season": "November to April",
+            "average_tourist_spend_usd_per_day": 150,
+            "key_attractions": ["Victoria Falls", "Mosi-oa-Tunya National Park", "Zambezi River activities", "Livingstone Museum"]
+          },
+          "cross_border": {
+            "zimbabwe_km": 10,
+            "botswana_km": 70,
+            "border_post": "Victoria Falls Bridge (Zimbabwe), Kazungula (Botswana/Zimbabwe)"
+          }
+        },
+
+        "choma": {
+          "name": "Choma",
+          "type": "provincial_capital",
+          "population": 110000,
+          "coordinates": {"lat": -16.8072, "lng": 26.9827},
+          "economic_profile": {
+            "dominant_industries": ["agriculture", "livestock", "trade", "services"],
+            "notable": "Zambia's cattle capital — significant beef and dairy production",
+            "average_monthly_income_zmw": 4200,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["agro-processing", "livestock products", "input supply", "rural finance"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 8,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "good"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 90,
+            "rental_cost_residential_zmw": 2500,
+            "key_challenges": ["drought risk", "limited processing capacity", "distance from major markets"],
+            "unique_opportunities": ["cattle/beef supply chain", "dairy processing", "leather industry", "ZNFU presence", "Tonga farming community — strong agricultural base"]
+          }
+        },
+
+        "mazabuka": {
+          "name": "Mazabuka",
+          "type": "agro_town",
+          "population": 85000,
+          "coordinates": {"lat": -15.8558, "lng": 27.7614},
+          "economic_profile": {
+            "dominant_industries": ["sugar cane farming", "agro-processing", "services"],
+            "major_employers": ["Zambia Sugar (Illovo)", "smallholder sugar outgrowers"],
+            "average_monthly_income_zmw": 5000,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["sugar outgrower scheme", "agro-inputs", "transport"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 6,
+            "water_reliability": "good",
+            "internet_quality": "moderate",
+            "road_quality": "good"
+          },
+          "business_environment": {
+            "key_challenges": ["sugar price dependency", "seasonal cash flow"],
+            "unique_opportunities": ["Zambia Sugar outgrower scheme — guaranteed offtake", "agro-input supply", "worker housing rentals", "food supply to sugar estate workers"]
+          }
+        },
+
+        "monze": {
+          "name": "Monze",
+          "type": "agro_town",
+          "population": 70000,
+          "coordinates": {"lat": -16.2731, "lng": 27.4733},
+          "economic_profile": {
+            "dominant_industries": ["agriculture", "livestock", "trade"],
+            "average_monthly_income_zmw": 3800,
+            "business_density": "low_medium",
+            "fastest_growing_sectors": ["maize farming", "cattle", "input supply"]
+          },
+          "infrastructure": {
+            "power_reliability": "poor",
+            "load_shedding_hours_per_day": 10,
+            "water_reliability": "moderate",
+            "internet_quality": "poor_moderate",
+            "road_quality": "moderate"
+          },
+          "business_environment": {
+            "unique_opportunities": ["underserved agro-input market", "cattle trading", "grain aggregation"]
+          }
+        }
+      }
+    },
+
+    "eastern": {
+      "name": "Eastern Province",
+      "capital": "Chipata",
+      "population": 1900000,
+      "gdp_contribution_pct": 10,
+      "key_sectors": ["agriculture", "trade", "tourism"],
+      "towns": {
+
+        "chipata": {
+          "name": "Chipata",
+          "type": "provincial_capital",
+          "population": 250000,
+          "coordinates": {"lat": -13.6436, "lng": 32.6449},
+          "economic_profile": {
+            "dominant_industries": ["agriculture", "cross-border trade", "services", "tourism"],
+            "major_markets": ["Chipata Central Market", "Malawi cross-border trade"],
+            "average_monthly_income_zmw": 4500,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["tobacco trading", "maize", "soya bean", "cross-border Malawi", "agro-processing"]
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 8,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "good",
+            "airport": "Chipata Airport"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 100,
+            "rental_cost_residential_zmw": 3000,
+            "key_challenges": ["distance from Lusaka (570km)", "seasonal agriculture dependency"],
+            "unique_opportunities": ["Malawi border trade (Mchinji)", "tobacco value chain", "South Luangwa tourism supply chain", "soya processing", "maize aggregation for export"]
+          },
+          "cross_border": {
+            "malawi_km": 25,
+            "border_post": "Mchinji (Malawi)",
+            "mozambique_km": 200,
+            "cross_border_opportunities": ["Malawi export market", "Mozambique corridor"]
+          }
+        },
+
+        "petauke": {
+          "name": "Petauke",
+          "type": "district_town",
+          "population": 45000,
+          "coordinates": {"lat": -14.2500, "lng": 31.3333},
+          "economic_profile": {
+            "dominant_industries": ["agriculture", "trade"],
+            "average_monthly_income_zmw": 3200,
+            "business_density": "low",
+            "fastest_growing_sectors": ["maize", "soya", "groundnuts"]
+          },
+          "infrastructure": {
+            "power_reliability": "poor",
+            "load_shedding_hours_per_day": 12,
+            "water_reliability": "poor",
+            "internet_quality": "poor",
+            "road_quality": "moderate"
+          },
+          "business_environment": {
+            "unique_opportunities": ["grain aggregation", "rural agro-input supply", "mobile money agent network"]
+          }
+        }
+      }
+    },
+
+    "northern": {
+      "name": "Northern Province",
+      "capital": "Kasama",
+      "population": 1400000,
+      "gdp_contribution_pct": 6,
+      "key_sectors": ["agriculture", "fishing", "mining (emerging)", "tourism"],
+      "towns": {
+
+        "kasama": {
+          "name": "Kasama",
+          "type": "provincial_capital",
+          "population": 120000,
+          "coordinates": {"lat": -10.2139, "lng": 31.1803},
+          "economic_profile": {
+            "dominant_industries": ["government", "agriculture", "trade", "services"],
+            "average_monthly_income_zmw": 4000,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["cassava processing", "sunflower oil", "services", "government contracts"]
+          },
+          "infrastructure": {
+            "power_reliability": "poor_moderate",
+            "load_shedding_hours_per_day": 10,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "moderate",
+            "airport": "Kasama Airport"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 80,
+            "rental_cost_residential_zmw": 2500,
+            "key_challenges": ["remoteness", "poor infrastructure", "limited private investment"],
+            "unique_opportunities": ["cassava value chain", "sunflower/edible oil", "fish from Lake Tanganyika supply chain", "government procurement", "Bemba cultural tourism"]
+          }
+        },
+
+        "mbala": {
+          "name": "Mbala",
+          "type": "border_town",
+          "population": 55000,
+          "coordinates": {"lat": -8.8333, "lng": 31.3667},
+          "economic_profile": {
+            "dominant_industries": ["fishing", "agriculture", "cross-border trade"],
+            "notable": "Gateway to Lake Tanganyika — major fishing economy",
+            "average_monthly_income_zmw": 3500,
+            "business_density": "low_medium"
+          },
+          "infrastructure": {
+            "power_reliability": "poor",
+            "load_shedding_hours_per_day": 12,
+            "water_reliability": "moderate",
+            "internet_quality": "poor",
+            "road_quality": "poor_moderate"
+          },
+          "business_environment": {
+            "unique_opportunities": ["Lake Tanganyika fish — kapenta, Nile perch", "Tanzania border trade", "fish processing/drying", "lake tourism"]
+          },
+          "cross_border": {
+            "tanzania_km": 30,
+            "lake_tanganyika": true
+          }
+        }
+      }
+    },
+
+    "luapula": {
+      "name": "Luapula Province",
+      "capital": "Mansa",
+      "population": 1000000,
+      "gdp_contribution_pct": 4,
+      "key_sectors": ["fishing", "agriculture", "trade"],
+      "towns": {
+
+        "mansa": {
+          "name": "Mansa",
+          "type": "provincial_capital",
+          "population": 100000,
+          "coordinates": {"lat": -11.2000, "lng": 28.8833},
+          "economic_profile": {
+            "dominant_industries": ["government", "fishing", "agriculture", "trade"],
+            "notable": "Kapenta fishing capital — major source of kapenta for national market",
+            "average_monthly_income_zmw": 3800,
+            "business_density": "low_medium",
+            "fastest_growing_sectors": ["kapenta processing", "cassava value chain", "retail"]
+          },
+          "infrastructure": {
+            "power_reliability": "poor",
+            "load_shedding_hours_per_day": 12,
+            "water_reliability": "moderate",
+            "internet_quality": "poor_moderate",
+            "road_quality": "moderate"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 70,
+            "rental_cost_residential_zmw": 2000,
+            "unique_opportunities": ["kapenta fishing and processing", "fish supply to Copperbelt", "cassava/tapioca processing", "DRC proximity"]
+          },
+          "cross_border": {
+            "drc_km": 50,
+            "lake_mweru": true,
+            "cross_border_opportunities": ["DRC fish trade", "DRC food supply"]
+          }
+        },
+
+        "nchelenge": {
+          "name": "Nchelenge",
+          "type": "fishing_town",
+          "population": 35000,
+          "coordinates": {"lat": -9.3500, "lng": 28.7333},
+          "economic_profile": {
+            "dominant_industries": ["kapenta fishing", "subsistence farming"],
+            "notable": "Major kapenta fishing centre on Lake Mweru",
+            "average_monthly_income_zmw": 2800,
+            "business_density": "low"
+          },
+          "business_environment": {
+            "unique_opportunities": ["kapenta fishing supply chain", "fish drying/processing", "boat building/repair", "DRC trade via lake"]
+          }
+        }
+      }
+    },
+
+    "north_western": {
+      "name": "North-Western Province",
+      "capital": "Solwezi",
+      "population": 800000,
+      "gdp_contribution_pct": 15,
+      "key_sectors": ["copper mining (largest new investment)", "agriculture", "services"],
+      "towns": {
+
+        "solwezi": {
+          "name": "Solwezi",
+          "type": "mining_boom_town",
+          "population": 220000,
+          "coordinates": {"lat": -12.1736, "lng": 26.3975},
+          "economic_profile": {
+            "dominant_industries": ["copper mining", "services", "construction", "retail", "agriculture"],
+            "major_employers": ["First Quantum Minerals (FQM) — Kansanshi Mine", "Barrick (Lumwana Mine)"],
+            "average_monthly_income_zmw": 7500,
+            "business_density": "high",
+            "fastest_growing_sectors": ["mining supply chain", "construction", "retail", "hospitality", "agriculture"],
+            "notable": "FASTEST GROWING town in Zambia — massive FQM/Barrick investment driving economy"
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 4,
+            "water_reliability": "moderate",
+            "internet_quality": "good",
+            "road_quality": "good",
+            "airport": "Solwezi Airport"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 250,
+            "rental_cost_residential_zmw": 6000,
+            "key_challenges": ["rapid growth straining infrastructure", "high cost of living", "skilled labour shortage"],
+            "unique_opportunities": ["FQM Kansanshi supply chain — HUGE", "Lumwana mine supply chain", "construction boom", "expat mining worker market", "logistics hub emerging", "agro-processing for mine workforce"]
+          },
+          "mining_data": {
+            "kansanshi_mine": "One of Africa's largest copper mines — 250,000t copper/year",
+            "lumwana_mine": "Barrick — large scale copper and gold",
+            "combined_workforce": "15,000+ direct and indirect jobs"
+          }
+        },
+
+        "kasempa": {
+          "name": "Kasempa",
+          "type": "district_town",
+          "population": 25000,
+          "coordinates": {"lat": -13.4667, "lng": 25.8333},
+          "economic_profile": {
+            "dominant_industries": ["agriculture", "beeswax/honey", "timber"],
+            "average_monthly_income_zmw": 2800,
+            "business_density": "low"
+          },
+          "business_environment": {
+            "unique_opportunities": ["honey/beeswax production — high quality", "timber supply chain", "emerging mining exploration"]
+          }
+        }
+      }
+    },
+
+    "western": {
+      "name": "Western Province",
+      "capital": "Mongu",
+      "population": 1000000,
+      "gdp_contribution_pct": 4,
+      "key_sectors": ["agriculture", "fishing", "livestock", "tourism", "government"],
+      "towns": {
+
+        "mongu": {
+          "name": "Mongu",
+          "type": "provincial_capital",
+          "population": 100000,
+          "coordinates": {"lat": -15.2560, "lng": 23.1371},
+          "economic_profile": {
+            "dominant_industries": ["government", "agriculture", "fishing", "trade", "tourism"],
+            "notable": "Kuomboka ceremony — major cultural tourism draw. Barotse floodplain agriculture.",
+            "average_monthly_income_zmw": 3800,
+            "business_density": "low_medium",
+            "fastest_growing_sectors": ["tourism", "agro-processing", "retail", "government contracts"]
+          },
+          "infrastructure": {
+            "power_reliability": "poor_moderate",
+            "load_shedding_hours_per_day": 10,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "poor_moderate",
+            "airport": "Mongu Airport",
+            "seasonal_flooding": "Barotse Plains flood March-June — road access limited"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 75,
+            "rental_cost_residential_zmw": 2200,
+            "key_challenges": ["seasonal flooding cuts off supply routes", "remoteness", "poor road infrastructure"],
+            "unique_opportunities": ["Kuomboka cultural tourism", "Barotse floodplain fish (bream, tilapia)", "cassava value chain", "rice growing potential", "Angolan border trade"]
+          },
+          "cross_border": {
+            "angola_km": 80,
+            "border_post": "Sesheke-Katima Mulilo (Namibia via Sesheke)"
+          }
+        },
+
+        "sesheke": {
+          "name": "Sesheke",
+          "type": "border_town",
+          "population": 40000,
+          "coordinates": {"lat": -17.4800, "lng": 24.2900},
+          "economic_profile": {
+            "dominant_industries": ["cross-border trade", "fishing", "agriculture"],
+            "average_monthly_income_zmw": 3200,
+            "business_density": "low"
+          },
+          "business_environment": {
+            "unique_opportunities": ["Namibia border trade (Katima Mulilo)", "Zambezi River fish", "Namibian consumer goods import", "SADC trade route"]
+          },
+          "cross_border": {
+            "namibia_km": 2,
+            "botswana_km": 60,
+            "border_post": "Katima Mulilo (Namibia)"
+          }
+        }
+      }
+    },
+
+    "central": {
+      "name": "Central Province",
+      "capital": "Kabwe",
+      "population": 1800000,
+      "gdp_contribution_pct": 8,
+      "key_sectors": ["agriculture", "mining (emerald)", "trade", "manufacturing"],
+      "towns": {
+
+        "kabwe": {
+          "name": "Kabwe",
+          "type": "provincial_capital",
+          "population": 250000,
+          "coordinates": {"lat": -14.4469, "lng": 28.4464},
+          "economic_profile": {
+            "dominant_industries": ["trade", "agriculture", "services", "transport"],
+            "average_monthly_income_zmw": 4500,
+            "business_density": "medium",
+            "fastest_growing_sectors": ["transport logistics", "agro-processing", "retail"],
+            "strategic_location": "Midpoint between Lusaka (140km) and Copperbelt — major trucking hub"
+          },
+          "infrastructure": {
+            "power_reliability": "moderate",
+            "load_shedding_hours_per_day": 7,
+            "water_reliability": "moderate",
+            "internet_quality": "moderate",
+            "road_quality": "good"
+          },
+          "business_environment": {
+            "rental_cost_commercial_zmw_per_sqm": 120,
+            "rental_cost_residential_zmw": 3000,
+            "key_challenges": ["lead contamination legacy affects image"],
+            "unique_opportunities": ["Great North Road logistics", "agricultural corridor", "trucking services", "military presence — procurement opportunities"]
+          }
+        },
+
+        "mkushi": {
+          "name": "Mkushi",
+          "type": "agro_town",
+          "population": 50000,
+          "coordinates": {"lat": -13.6167, "lng": 29.3833},
+          "economic_profile": {
+            "dominant_industries": ["commercial farming", "agro-processing", "services"],
+            "notable": "Major commercial farming block — wheat, soya, maize, cattle",
+            "average_monthly_income_zmw": 4000,
+            "business_density": "low_medium",
+            "fastest_growing_sectors": ["agro-processing", "input supply", "logistics"]
+          },
+          "business_environment": {
+            "unique_opportunities": ["farm input supply chain", "agro-processing (wheat flour)", "cold chain logistics", "farm equipment services", "accommodation for farm workers"]
+          }
+        },
+
+        "serenje": {
+          "name": "Serenje",
+          "type": "agro_town",
+          "population": 40000,
+          "coordinates": {"lat": -13.2333, "lng": 30.2333},
+          "economic_profile": {
+            "dominant_industries": ["agriculture", "mushroom farming", "services"],
+            "notable": "Wild mushroom production — exported to Lusaka and internationally",
+            "average_monthly_income_zmw": 3200,
+            "business_density": "low"
+          },
+          "business_environment": {
+            "unique_opportunities": ["wild mushroom drying and export", "honey production", "sunflower farming", "Great North Road transit business"]
+          }
+        }
+      }
+    },
+
+    "muchinga": {
+      "name": "Muchinga Province",
+      "capital": "Chinsali",
+      "population": 700000,
+      "gdp_contribution_pct": 3,
+      "key_sectors": ["agriculture", "mining (emerging)", "government"],
+      "towns": {
+
+        "chinsali": {
+          "name": "Chinsali",
+          "type": "provincial_capital",
+          "population": 45000,
+          "coordinates": {"lat": -10.5500, "lng": 32.0667},
+          "economic_profile": {
+            "dominant_industries": ["government", "agriculture", "trade"],
+            "average_monthly_income_zmw": 3500,
+            "business_density": "low",
+            "fastest_growing_sectors": ["government services", "agro-processing", "retail"]
+          },
+          "infrastructure": {
+            "power_reliability": "poor",
+            "load_shedding_hours_per_day": 14,
+            "water_reliability": "poor_moderate",
+            "internet_quality": "poor",
+            "road_quality": "moderate"
+          },
+          "business_environment": {
+            "unique_opportunities": ["government procurement", "cassava processing", "sunflower oil", "emerging capital status"]
+          }
+        },
+
+        "mpika": {
+          "name": "Mpika",
+          "type": "transit_town",
+          "population": 50000,
+          "coordinates": {"lat": -11.8333, "lng": 31.4500},
+          "economic_profile": {
+            "dominant_industries": ["trade", "transport", "agriculture"],
+            "notable": "Key stop on TAZARA railway and Great North Road to Tanzania",
+            "average_monthly_income_zmw": 3300,
+            "business_density": "low_medium"
+          },
+          "business_environment": {
+            "unique_opportunities": ["truck stop services", "TAZARA railway freight logistics", "Tanzania corridor trade", "fuel supply", "accommodation for travellers"]
+          },
+          "cross_border": {
+            "tanzania_km": 350,
+            "great_north_road": true,
+            "tazara_railway": true
+          }
+        }
+      }
+    }
+  },
+
+  "cross_cutting_data": {
+    "mobile_money_agents_density": {
+      "urban": "very_high",
+      "peri_urban": "high",
+      "rural": "moderate",
+      "note": "Airtel Money and MTN MoMo most used. Critical for rural business payments."
+    },
+    "fsp_presence": {
+      "NATSAVE": "strongest rural presence — all provincial capitals and many district towns",
+      "Zanaco": "urban focus — major towns",
+      "FNB": "urban — provincial capitals",
+      "MicroBankers": "rural microfinance — district level",
+      "CEEC": "all 10 provincial offices + some district offices"
+    },
+    "agricultural_seasons": {
+      "planting": "November to January",
+      "growing": "January to April",
+      "harvest": "April to June",
+      "dry_season": "May to October",
+      "note": "Business cash flow in agricultural areas peaks May-July post harvest"
+    },
+    "load_shedding_impact": {
+      "businesses_most_affected": ["food processing", "cold chain", "manufacturing", "restaurants"],
+      "mitigation_common": "generators (petrol/diesel), solar inverters, adjusting hours",
+      "generator_fuel_cost_zmw_per_litre": 28,
+      "solar_inverter_cost_zmw_range": "K8000 to K45000"
+    }
+  }
+}
