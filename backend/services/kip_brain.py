@@ -30,27 +30,28 @@ def get_claude_client() -> anthropic.Anthropic:
 # ── ChromaDB (optional — graceful fallback if not installed) ──────────────────
 _chroma_collection = None
 
+# def get_chroma_collection():
+#     global _chroma_collection
+#     if _chroma_collection is not None:
+#         return _chroma_collection
+#     try:
+#         import chromadb
+#         from chromadb.utils import embedding_functions
+#         client = chromadb.PersistentClient(path=settings.CHROMA_DB_PATH)
+#         ef = embedding_functions.SentenceTransformerEmbeddingFunction(
+#             model_name="all-MiniLM-L6-v2"
+#         )
+#         _chroma_collection = client.get_collection(
+#             name=settings.CHROMA_COLLECTION,
+#             embedding_function=ef,
+#         )
+#         logger.info(f"✅ ChromaDB loaded: {_chroma_collection.count()} chunks")
+#         return _chroma_collection
+#     except Exception as e:
+#         logger.warning(f"ChromaDB not available: {e}. Running without RAG.")
+#         return None
 def get_chroma_collection():
-    global _chroma_collection
-    if _chroma_collection is not None:
-        return _chroma_collection
-    try:
-        import chromadb
-        from chromadb.utils import embedding_functions
-        client = chromadb.PersistentClient(path=settings.CHROMA_DB_PATH)
-        ef = embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name="all-MiniLM-L6-v2"
-        )
-        _chroma_collection = client.get_collection(
-            name=settings.CHROMA_COLLECTION,
-            embedding_function=ef,
-        )
-        logger.info(f"✅ ChromaDB loaded: {_chroma_collection.count()} chunks")
-        return _chroma_collection
-    except Exception as e:
-        logger.warning(f"ChromaDB not available: {e}. Running without RAG.")
-        return None
-
+    return None  # ChromaDB disabled on cloud — RAG runs locally only
 
 def retrieve_context(query: str, n_results: int = 5) -> str:
     """Retrieve relevant context chunks from the KIP knowledge base."""

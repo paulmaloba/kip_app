@@ -14,13 +14,8 @@ pydantic-core==2.18.4
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 
-# AI / ML
+# AI
 anthropic==0.40.0
-chromadb==0.5.20
-sentence-transformers==3.3.1
-numpy==1.26.4
-scikit-learn==1.5.2
-pandas==2.2.3
 
 # HTTP / News
 httpx==0.28.0
@@ -30,3 +25,9 @@ python-dotenv==1.0.1
 python-multipart==0.0.17
 twilio==9.4.0
 
+# Removed — crash Render free tier (only needed for local ChromaDB RAG):
+# chromadb==0.5.20
+# sentence-transformers==3.3.1
+# numpy==1.26.4
+# scikit-learn==1.5.2
+# pandas==2.2.3
