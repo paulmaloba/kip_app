@@ -24,7 +24,8 @@ def create_notification(
     title:    str,
     message:  str,
     notif_type: str = "info",   # info | warning | alert | success
-    user_id:  Optional[str] = None,
+    # user_id:  Optional[str] = None,
+    user_id: Optional[str | int] = None,
     data:     Optional[dict] = None,
     action_label: Optional[str] = None,
     action_url:   Optional[str] = None,

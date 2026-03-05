@@ -67,10 +67,16 @@ async def get_or_create_conversation(
     )
     conv = result.scalar_one_or_none()
     if not conv:
+        # conv = Conversation(
+        #     id=str(uuid.uuid4()),
+        #     session_token=session_token,
+        #     user_id=user_id,
+        #     business_id=business_id,
+        # )
+        # TO:
         conv = Conversation(
-            id=str(uuid.uuid4()),
             session_token=session_token,
-            user_id=user_id,
+            user_id=int(user_id) if user_id else None,
             business_id=business_id,
         )
         db.add(conv)
@@ -137,7 +143,7 @@ async def send_message(
 
     # Save user message
     user_msg = Message(
-        id=str(uuid.uuid4()),
+        # id=str(uuid.uuid4()),
         conversation_id=conv.id,
         role=MessageRole.user,
         content=req.get_message(),
@@ -163,7 +169,7 @@ async def send_message(
         rt = ResponseType.general
 
     assistant_msg = Message(
-        id=str(uuid.uuid4()),
+        # id=str(uuid.uuid4()),
         conversation_id=conv.id,
         role=MessageRole.assistant,
         content=result["content"],
